@@ -1,6 +1,6 @@
 from etl import df_final
 import psycopg2
-from conexão import conexao
+from conexao import conexao
 
 def executar_sql():
     cursor = conexao.cursor()
@@ -24,8 +24,6 @@ def executar_sql():
         );
     '''
     cursor.execute(criando_tabela_estadual)
-
-    # Opcional: limpar a tabela antes de inserir
     cursor.execute('TRUNCATE energia.compensacao_energia;')
 
     inserindo_dados = '''
