@@ -1,3 +1,4 @@
 conexao.py
 Planilhas baixadas/
 .env
+.env.prod
