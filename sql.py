@@ -34,7 +34,7 @@ def executar_sql():
         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
     '''
     try:
-        for idx, i in df_final.iterrows():
+        for i in df_final.iter_rows(named=True):
             dados = (
                 i['NomEstado'],
                 i['NomMunicipio'],
